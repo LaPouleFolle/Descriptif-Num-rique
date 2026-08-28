@@ -1,0 +1,56 @@
+/* --- THÈME BLEU CLAIR & LUMINEUX --- */
+
+/* Fond global de l'application */
+.stApp {
+    background-color: #f0f4f8;
+    color: #102a43;
+}
+
+/* Style des cartes / blocs de contenu */
+.section-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #bcccdc;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+/* Typographie des titres */
+h1, h2, h3 {
+    color: #0b69a3 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Bouton principal (Couleur accentuée) */
+.stButton>button {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.stButton>button:hover {
+    background-color: #0369a1;
+    color: #ffffff;
+}
+
+/* Bouton de téléchargement du CV */
+.stDownloadButton>button {
+    background-color: #0ea5e9;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100%;
+}
+.stDownloadButton>button:hover {
+    background-color: #0284c7;
+}
+
+/* Texte général et listes dans les cartes */
+p, li {
+    color: #334e68 !important;
+}

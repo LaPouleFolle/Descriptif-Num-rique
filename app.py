@@ -8,44 +8,16 @@ st.set_page_config(
     layout="wide",
 )
 
-# Style CSS personnalisé pour un look "Vrai site web" moderne
-st.markdown("""
-    <style>
-    .stApp {
-        background-color: #0d1b2a;
-        color: #e2e8f0;
-    }
-    .section-card {
-        background-color: #1b263b;
-        padding: 2rem;
-        border-radius: 12px;
-        border: 1px solid #415a77;
-        margin-bottom: 1.5rem;
-    }
-    h1, h2, h3 {
-        color: #ffffff !important;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .stButton>button {
-        background-color: #ffb703;
-        color: #0d1b2a;
-        font-weight: bold;
-        border-radius: 8px;
-        padding: 0.6rem 1.2rem;
-        border: none;
-        width: 100%;
-    }
-    .stDownloadButton>button {
-        background-color: #3a86ff;
-        color: white;
-        font-weight: bold;
-        border-radius: 8px;
-        width: 100%;
-    }
-    </style>
-""", unsafe_allow_html=True)
+# Fonction pour charger le fichier CSS externe
+def load_css(file_name):
+    if os.path.exists(file_name):
+        with open(file_name, "r") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# --- MENU DE NAVIGATION FAÇON SITE WEB ---
+# Chargement du style
+load_css("assets/style.css")
+
+# --- MENU DE NAVIGATION ---
 selected_tab = st.radio(
     "Navigation", 
     ["Accueil & CV", "Compétences & Expertises", "Projets", "Contact"], 
@@ -71,8 +43,8 @@ if selected_tab == "Accueil & CV":
                 st.info("Photo non trouvée dans assets/")
 
     with col2:
-        st.markdown("<h1 style='font-size: 3rem; line-height: 1.1; color: #ffb703;'>ARSÈNE GABY<br>MBABEH MEYE</h1>", unsafe_allow_html=True)
-        st.markdown("### Data Analyst & Business Intelligence")
+        st.markdown("<h1 style='font-size: 3rem; line-height: 1.1; color: #0284c7;'>ARSÈNE GABY<br>MBABEH MEYE</h1>", unsafe_allow_html=True)
+        st.markdown("<h3 style='color: #334e68 !important;'>Data Analyst & Business Intelligence</h3>", unsafe_allow_html=True)
         st.write("Bienvenue sur mon site personnel. Spécialisé en modélisation de données, Business Intelligence et analyse décisionnelle, je conçois des solutions orientées performance.")
         
         st.markdown("<br>", unsafe_allow_html=True)
@@ -175,8 +147,8 @@ elif selected_tab == "Contact":
     
     st.markdown("""
     <div class='section-card' style='text-align: center;'>
-        <p>🔗 <b>LinkedIn :</b> <a href='https://linkedin.com' target='_blank' style='color: #3a86ff;'>Mon profil LinkedIn</a></p>
-        <p>💻 <b>GitHub :</b> <a href='https://github.com/LaPouleFolle' target='_blank' style='color: #3a86ff;'>Mes dépôts GitHub</a></p>
+        <p>🔗 <b>LinkedIn :</b> <a href='https://linkedin.com' target='_blank' style='color: #0284c7;'>Mon profil LinkedIn</a></p>
+        <p>💻 <b>GitHub :</b> <a href='https://github.com/LaPouleFolle' target='_blank' style='color: #0284c7;'>Mes dépôts GitHub</a></p>
         <p>📧 <b>Email :</b> ton-email@example.com</p>
     </div>
     """, unsafe_allow_html=True)
