@@ -146,8 +146,7 @@ elif selected_tab == "Contact":
     
     st.markdown("""
     <div class='section-card' style='text-align: center;'>
-        <p><b>LinkedIn :</b> <a href='www.linkedin.com/in/arsène-mbabeh-meye-4823a9258' target='_blank' style='color: #0284c7;'>Mon profil LinkedIn</a></p>
-        <p><b>GitHub :</b> <a href='https://github.com/LaPouleFolle' target='_blank' style='color: #0284c7;'>Mes dépôts GitHub</a></p>
+        <p><b>LinkedIn :</b> <a href='https://www.linkedin.com/in/arsène-mbabeh-meye-4823a9258' target='_blank' style='color: #0284c7;'>Mon profil LinkedIn</a></p>        <p><b>GitHub :</b> <a href='https://github.com/LaPouleFolle' target='_blank' style='color: #0284c7;'>Mes dépôts GitHub</a></p>
         <p><b>Email :</b> ton-email@example.com</p>
     </div>
     """, unsafe_allow_html=True)
