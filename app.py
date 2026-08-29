@@ -4,7 +4,6 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(
     page_title="Arsène Gaby Mbabeh Meye",
-    page_icon="💼",
     layout="wide",
 )
 
@@ -53,7 +52,7 @@ if selected_tab == "Accueil & CV":
         if os.path.exists(cv_path):
             with open(cv_path, "rb") as f:
                 st.download_button(
-                    label="📥 Télécharger mon CV officiel",
+                    label="Télécharger mon CV officiel",
                     data=f,
                     file_name="CV_Arsene_Mbabeh_Meye.pdf",
                     mime="application/pdf",
@@ -63,14 +62,14 @@ if selected_tab == "Accueil & CV":
 
 # ================= PAGE 2 : COMPÉTENCES & EXPERTISES =================
 elif selected_tab == "Compétences & Expertises":
-    st.markdown("## 🚀 Mes Domaines d'Expertise")
+    st.markdown("## Mes Domaines d'Expertise")
     
     col_a, col_b = st.columns(2, gap="medium")
     
     with col_a:
         st.markdown("""
         <div class='section-card'>
-            <h3>🗄️ Bases de Données & ETL</h3>
+            <h3>Bases de Données & ETL</h3>
             <ul>
                 <li><b>SQL avancé :</b> PostgreSQL, Oracle, Sybase</li>
                 <li><b>Modélisation :</b> Relationnelle & dimensionnelle (schéma en étoile)</li>
@@ -78,7 +77,7 @@ elif selected_tab == "Compétences & Expertises":
         </div>
         
         <div class='section-card'>
-            <h3>📊 Business Intelligence & Dataviz</h3>
+            <h3>Business Intelligence & Dataviz</h3>
             <ul>
                 <li>SAS Visual Analytics, Power BI</li>
                 <li>Apache Superset, Tableau, Excel</li>
@@ -86,7 +85,7 @@ elif selected_tab == "Compétences & Expertises":
         </div>
         
         <div class='section-card'>
-            <h3>💻 Programmation & Analyse</h3>
+            <h3>Programmation & Analyse</h3>
             <ul>
                 <li>SAS Viya</li>
                 <li>Python (Pandas, NumPy, Matplotlib)</li>
@@ -98,7 +97,7 @@ elif selected_tab == "Compétences & Expertises":
     with col_b:
         st.markdown("""
         <div class='section-card'>
-            <h3>📈 Statistiques & Data Science</h3>
+            <h3>Statistiques & Data Science</h3>
             <ul>
                 <li>Statistiques descriptives & inférentielles</li>
                 <li>Régressions, Classification, Clustering</li>
@@ -106,7 +105,7 @@ elif selected_tab == "Compétences & Expertises":
         </div>
         
         <div class='section-card'>
-            <h3>📋 Qualité & Méthodes</h3>
+            <h3>Qualité & Méthodes</h3>
             <ul>
                 <li>Documentation technique & procédures qualité</li>
                 <li>Gouvernance des données, Traitement de demandes ad hoc</li>
@@ -115,7 +114,7 @@ elif selected_tab == "Compétences & Expertises":
         </div>
         
         <div class='section-card'>
-            <h3>🎯 Gestion de projet</h3>
+            <h3>Gestion de projet</h3>
             <ul>
                 <li>Pilotage et structuration de projets data</li>
             </ul>
@@ -124,7 +123,7 @@ elif selected_tab == "Compétences & Expertises":
 
 # ================= PAGE 3 : PROJETS =================
 elif selected_tab == "Projets":
-    st.markdown("## 💼 Projets Réalisés")
+    st.markdown("## Projets Réalisés")
     
     st.markdown("""
     <div class='section-card'>
@@ -142,13 +141,13 @@ elif selected_tab == "Projets":
 
 # ================= PAGE 4 : CONTACT =================
 elif selected_tab == "Contact":
-    st.markdown("## 📫 Me contacter")
+    st.markdown("##Me contacter")
     st.write("Un projet, une opportunité ou une question ? N'hésite pas à me contacter directement via les canaux ci-dessous :")
     
     st.markdown("""
     <div class='section-card' style='text-align: center;'>
-        <p>🔗 <b>LinkedIn :</b> <a href='https://linkedin.com' target='_blank' style='color: #0284c7;'>Mon profil LinkedIn</a></p>
-        <p>💻 <b>GitHub :</b> <a href='https://github.com/LaPouleFolle' target='_blank' style='color: #0284c7;'>Mes dépôts GitHub</a></p>
-        <p>📧 <b>Email :</b> ton-email@example.com</p>
+        <p><b>LinkedIn :</b> <a href='www.linkedin.com/in/arsène-mbabeh-meye-4823a9258' target='_blank' style='color: #0284c7;'>Mon profil LinkedIn</a></p>
+        <p><b>GitHub :</b> <a href='https://github.com/LaPouleFolle' target='_blank' style='color: #0284c7;'>Mes dépôts GitHub</a></p>
+        <p><b>Email :</b> ton-email@example.com</p>
     </div>
     """, unsafe_allow_html=True)
