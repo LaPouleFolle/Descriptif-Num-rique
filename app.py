@@ -120,8 +120,8 @@ elif selected_tab == "Compétences & Expertises":
             </ul>
         </div>
         """, unsafe_allow_html=True)
-
-# ================= PAGE 3 : PROJETS =================
+    
+    # ================= PAGE 3 : PROJETS =================
 elif selected_tab == "Projets":
     st.markdown("## Projets Réalisés")
     
@@ -131,11 +131,11 @@ elif selected_tab == "Projets":
         <h3>Déploiement d'une solution de Business Intelligence (SYDESL)</h3>
         <p>Conception et mise en œuvre d'une architecture décisionnelle complète visant à centraliser, fiabiliser et valoriser les données énergétiques et patrimoniales du syndicat.</p>
         <ul>
-            <li><b>Ingénierie des données :</b> Extraction, nettoyage et harmonisation de sources de données hétérogènes (fichiers Enedis, bases de donnée Oracle, données SIG) via des scripts SQL.</li>
-            <li><b>Modélisation :</b> Mise en place d'un Data Warehouse sous PostgreSQL avec une architecture en constellation (c'est à dire, une séparation en tables de faits et dimensions).</li>
-            <li><b>Restitution & Dataviz :</b> Développement de tableaux de bord interactifs sous Apache Superset à destination des 565 communes du Département de Saône et Loire (bilans énergétiques, suivi des interventions) et création d'outils de contrôle qualité pour les prestataires.</li>
+            <li><b>Ingénierie des données :</b> Extraction, nettoyage et harmonisation de sources hétérogènes (fichiers Enedis, bases métiers Oracle, données SIG) via des scripts SQL.</li>
+            <li><b>Modélisation :</b> Mise en place d'un Data Warehouse sous PostgreSQL avec une architecture en constellation (séparation en tables de faits et dimensions).</li>
+            <li><b>Restitution & Dataviz :</b> Développement de tableaux de bord interactifs sous Apache Superset à destination des 565 communes (bilans énergétiques, suivi des interventions) et création d'outils de contrôle qualité pour les prestataires.</li>
         </ul>
-        <p><b>Technologies :</b> PostgreSQL, SQL, Apache Superset</p>
+        <p><b>Technologies :</b> PostgreSQL, SQL, Apache Superset, Data Warehousing, ETL</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -146,27 +146,14 @@ elif selected_tab == "Projets":
         if os.path.exists(schema_path):
             st.image(schema_path, caption="Modèle en constellation du Data Warehouse", use_container_width=True)
         else:
-            st.info("'schema_bdd.png'")
+            st.info("Place ton image de schéma de base de données dans le dossier assets/ sous le nom 'schema_bdd.png'")
             
     with col2:
         rapport_path = "assets/rapport_sydesl.png"
         if os.path.exists(rapport_path):
             st.image(rapport_path, caption="Extrait du tableau de bord interactif", use_container_width=True)
         else:
-            st.info("'rapport_sydesl.png'")
-
-    # ESPACE POUR LES FUTURS PROJETS
-    # Tu pourras décommenter et modifier cette section plus tard
-    """
-    st.markdown("<br>", unsafe_allow_html=True)
-    st.markdown("""
-    <div class='section-card'>
-        <h3>Titre du futur projet</h3>
-        <p>Description courte du projet à venir.</p>
-        <p><b>Technologies :</b> Outil 1, Outil 2</p>
-    </div>
-    """, unsafe_allow_html=True)
-    """
+            st.info("Place ta capture de rapport Superset dans le dossier assets/ sous le nom 'rapport_sydesl.png'")
 
 # ================= PAGE 4 : CONTACT =================
 elif selected_tab == "Contact":
