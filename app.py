@@ -125,28 +125,57 @@ elif selected_tab == "Compétences & Expertises":
 elif selected_tab == "Projets":
     st.markdown("## Projets Réalisés")
     
+    # PROJET 1 : SYDESL (Mémoire)
     st.markdown("""
     <div class='section-card'>
-        <h3>GabonMarket</h3>
-        <p>Plateforme e-commerce moderne pensée pour fluidifier les transactions et structurer l'expérience utilisateur.</p>
-        <p><b>Technologies :</b> Next.js, Tailwind CSS, Supabase</p>
-    </div>
-    
-    <div class='section-card'>
-        <h3>Tableaux de bord & Pilotage Data</h3>
-        <p>Conception et automatisation de rapports décisionnels pour analyser des volumes de données complexes et optimiser la prise de décision.</p>
-        <p><b>Technologies :</b> Power BI, SQL, Python</p>
+        <h3>Déploiement d'une solution de Business Intelligence (SYDESL)</h3>
+        <p>Conception et mise en œuvre d'une architecture décisionnelle complète visant à centraliser, fiabiliser et valoriser les données énergétiques et patrimoniales du syndicat.</p>
+        <ul>
+            <li><b>Ingénierie des données :</b> Extraction, nettoyage et harmonisation de sources de données hétérogènes (fichiers Enedis, bases de donnée Oracle, données SIG) via des scripts SQL.</li>
+            <li><b>Modélisation :</b> Mise en place d'un Data Warehouse sous PostgreSQL avec une architecture en constellation (c'est à dire, une séparation en tables de faits et dimensions).</li>
+            <li><b>Restitution & Dataviz :</b> Développement de tableaux de bord interactifs sous Apache Superset à destination des 565 communes du Département de Saône et Loire (bilans énergétiques, suivi des interventions) et création d'outils de contrôle qualité pour les prestataires.</li>
+        </ul>
+        <p><b>Technologies :</b> PostgreSQL, SQL, Apache Superset</p>
     </div>
     """, unsafe_allow_html=True)
 
+    # Affichage des captures d'écran pour le projet SYDESL
+    col1, col2 = st.columns(2, gap="medium")
+    with col1:
+        schema_path = "assets/schema_bdd.png"
+        if os.path.exists(schema_path):
+            st.image(schema_path, caption="Modèle en constellation du Data Warehouse", use_container_width=True)
+        else:
+            st.info("'schema_bdd.png'")
+            
+    with col2:
+        rapport_path = "assets/rapport_sydesl.png"
+        if os.path.exists(rapport_path):
+            st.image(rapport_path, caption="Extrait du tableau de bord interactif", use_container_width=True)
+        else:
+            st.info("'rapport_sydesl.png'")
+
+    # ESPACE POUR LES FUTURS PROJETS
+    # Tu pourras décommenter et modifier cette section plus tard
+    """
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='section-card'>
+        <h3>Titre du futur projet</h3>
+        <p>Description courte du projet à venir.</p>
+        <p><b>Technologies :</b> Outil 1, Outil 2</p>
+    </div>
+    """, unsafe_allow_html=True)
+    """
+
 # ================= PAGE 4 : CONTACT =================
 elif selected_tab == "Contact":
-    st.markdown("##Me contacter")
+    st.markdown("## Me contacter")
     st.write("Un projet, une opportunité ou une question ? N'hésite pas à me contacter directement via les canaux ci-dessous :")
     
     st.markdown("""
     <div class='section-card' style='text-align: center;'>
         <p><b>LinkedIn :</b> <a href='https://www.linkedin.com/in/arsène-mbabeh-meye-4823a9258' target='_blank' style='color: #0284c7;'>Mon profil LinkedIn</a></p>        <p><b>GitHub :</b> <a href='https://github.com/LaPouleFolle' target='_blank' style='color: #0284c7;'>Mes dépôts GitHub</a></p>
-        <p><b>Email :</b> ton-email@example.com</p>
+        <p><b>Email :</b>arsenemeye.mb@gmail.com</p>
     </div>
     """, unsafe_allow_html=True)
