@@ -48,7 +48,7 @@ if selected_tab == "Accueil & CV":
         
         st.markdown("<br>", unsafe_allow_html=True)
         
-        cv_path = "assets/Mon cv pro -cdi.pdf"
+        cv_path = "assets/Mon cv pro.pdf"
         if os.path.exists(cv_path):
             with open(cv_path, "rb") as f:
                 st.download_button(
