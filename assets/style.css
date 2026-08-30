@@ -1,56 +1,96 @@
-/* --- THÈME BLEU CLAIR & LUMINEUX --- */
+/* --- THÈME SOMBRE ÉLÉGANT & MINIMALISTE --- */
+
+/* Masquer les éléments natifs de Streamlit pour un rendu "Site Web" */
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
 
 /* Fond global de l'application */
 .stApp {
-    background-color: #f0f4f8;
-    color: #102a43;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 /* Style des cartes / blocs de contenu */
 .section-card {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid #bcccdc;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5rem;
+    background-color: #1e1e1e;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #2d2d2d;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-2px);
+    border-color: #404040;
 }
 
 /* Typographie des titres */
 h1, h2, h3 {
-    color: #0b69a3 !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff !important;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
-/* Bouton principal (Couleur accentuée) */
+/* Accentuation de ton nom en haut */
+h1 {
+    background: linear-gradient(90deg, #ffffff, #a3a3a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Boutons classiques */
 .stButton>button {
-    background-color: #0284c7;
+    background-color: #2d2d2d;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 8px;
-    padding: 0.6rem 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #404040;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.stButton>button:hover {
+    background-color: #ffffff;
+    color: #121212;
+    border-color: #ffffff;
+}
+
+/* Bouton de téléchargement du CV (Mise en avant) */
+.stDownloadButton>button {
+    background-color: #ffffff;
+    color: #121212;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
     border: none;
     width: 100%;
-    transition: all 0.3s ease;
-}
-.stButton>button:hover {
-    background-color: #0369a1;
-    color: #ffffff;
+    transition: all 0.2s ease;
 }
 
-/* Bouton de téléchargement du CV */
-.stDownloadButton>button {
-    background-color: #0ea5e9;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    width: 100%;
-}
 .stDownloadButton>button:hover {
-    background-color: #0284c7;
+    background-color: #e0e0e0;
+    transform: scale(1.02);
 }
 
 /* Texte général et listes dans les cartes */
 p, li {
-    color: #334e68 !important;
+    color: #a3a3a3 !important;
+    line-height: 1.6;
+}
+
+/* Liens hypertextes */
+a {
+    color: #ffffff !important;
+    text-decoration: none;
+    border-bottom: 1px solid #404040;
+    transition: border-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid #ffffff;
 }
