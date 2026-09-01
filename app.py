@@ -44,7 +44,7 @@ if selected_tab == "Accueil & CV":
     with col2:
         st.markdown("<h1 style='font-size: 3rem; line-height: 1.1; color: #0284c7;'>ARSÈNE GABY<br>MBABEH MEYE</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='color: #334e68 !important;'>Data Analyst & Business Intelligence</h3>", unsafe_allow_html=True)
-        st.write("Bienvenue sur mon site personnel. Spécialisé en modélisation de données, Business Intelligence et analyse décisionnelle, je conçois des solutions orientées performance.")
+        st.write("Data Analyst fort de quatre années d'expérience en alternance. De la structuration des bases de données à la création d'outils de Business Intelligence, je transforme les données brutes en informations claires pour faciliter la prise de décision stratégique.")
         
         st.markdown("<br>", unsafe_allow_html=True)
         
@@ -69,27 +69,21 @@ elif selected_tab == "Compétences & Expertises":
     with col_a:
         st.markdown("""
         <div class='section-card'>
-            <h3>Bases de Données & ETL</h3>
+            <h3>Bases de Données & Architecture</h3>
             <ul>
                 <li><b>SQL avancé :</b> PostgreSQL, Oracle, Sybase</li>
-                <li><b>Modélisation :</b> Relationnelle & dimensionnelle (schéma en étoile)</li>
+                <li><b>Modélisation :</b> Création de Data Warehouse, architecture en constellation, schéma en étoile</li>
+                <li><b>Traitement :</b> Processus ETL, nettoyage et harmonisation de sources de données hétérogènes</li>
             </ul>
         </div>
         
         <div class='section-card'>
-            <h3>Business Intelligence & Dataviz</h3>
+            <h3>Programmation & Outils</h3>
             <ul>
-                <li>SAS Visual Analytics, Power BI</li>
-                <li>Apache Superset, Tableau, Excel</li>
-            </ul>
-        </div>
-        
-        <div class='section-card'>
-            <h3>Programmation & Analyse</h3>
-            <ul>
-                <li>SAS Viya</li>
-                <li>Python (Pandas, NumPy, Matplotlib)</li>
-                <li>R</li>
+                <li><b>Python :</b> Pandas, NumPy, Matplotlib, Streamlit</li>
+                <li><b>Écosystème SAS :</b> SAS Viya</li>
+                <li><b>Autres langages :</b> SQL, R, HTML, CSS, PHP </li>
+                <li><b>Développement :</b> Git, GitHub, environnement Onyxia</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -97,31 +91,27 @@ elif selected_tab == "Compétences & Expertises":
     with col_b:
         st.markdown("""
         <div class='section-card'>
-            <h3>Statistiques & Data Science</h3>
+            <h3>Business Intelligence & Dataviz</h3>
             <ul>
-                <li>Statistiques descriptives & inférentielles</li>
-                <li>Régressions, Classification, Clustering</li>
+                <li><b>Outils open-source :</b> Apache Superset</li>
+                <li><b>Outils propriétaires :</b> SAS Visual Analytics, Power BI, Tableau</li>
+                <li><b>Restitution :</b> Création de tableaux de bord dynamiques, indicateurs de pilotage, reporting sous Excel</li>
             </ul>
         </div>
         
         <div class='section-card'>
-            <h3>Qualité & Méthodes</h3>
+            <h3>Méthodologie & Pilotage</h3>
             <ul>
-                <li>Documentation technique & procédures qualité</li>
-                <li>Gouvernance des données, Traitement de demandes ad hoc</li>
-                <li>Vulgarisation décisionnelle</li>
-            </ul>
-        </div>
-        
-        <div class='section-card'>
-            <h3>Gestion de projet</h3>
-            <ul>
-                <li>Pilotage et structuration de projets data</li>
+                <li>Analyse exploratoire et statistiques (descriptives, inférentielles, régressions)</li>
+                <li>Documentation technique et cartographie des processus métiers</li>
+                <li>Gouvernance des données et création de tableaux de contrôle qualité</li>
+                <li>Vulgarisation décisionnelle auprès des interlocuteurs métiers</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
-    
-    # ================= PAGE 3 : PROJETS =================
+
+
+ # ================= PAGE 3 : PROJETS =================
 elif selected_tab == "Projets":
     st.markdown("## Projets Réalisés")
     
