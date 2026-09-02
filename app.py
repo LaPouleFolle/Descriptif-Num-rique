@@ -113,7 +113,7 @@ elif selected_tab == "Compétences & Expertises":
 
  # ================= PAGE 3 : PROJETS =================
 elif selected_tab == "Projets":
-    st.markdown("## 💼 Projets Réalisés")
+    st.markdown("## Projets Réalisés")
     
     # PROJET 1 : SYDESL (Mémoire)
     st.markdown("""
