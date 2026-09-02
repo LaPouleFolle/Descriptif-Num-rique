@@ -113,19 +113,20 @@ elif selected_tab == "Compétences & Expertises":
 
  # ================= PAGE 3 : PROJETS =================
 elif selected_tab == "Projets":
-    st.markdown("## Projets Réalisés")
+    st.markdown("## 💼 Projets Réalisés")
     
     # PROJET 1 : SYDESL (Mémoire)
     st.markdown("""
     <div class='section-card'>
-        <h3>Déploiement d'une solution de Business Intelligence (SYDESL)</h3>
-        <p>Conception et mise en œuvre d'une architecture décisionnelle complète visant à centraliser, fiabiliser et valoriser les données énergétiques et patrimoniales du syndicat.</p>
+        <h3> Déploiement d'une solution de Business Intelligence (SYDESL)</h3>
+        <p>Dans le cadre du développement des tableaux de bord communaux, il était essentiel de structurer les données collectées de manière cohérente et interrogeable efficacement. Pour cela, j’ai mis en place une architecture décisionnelle reposant sur un modèle en constellation, entièrement implémentée dans PostgreSQL.</p>
+        <p>Les données exploitées provenaient de plusieurs environnements distincts, qu’il a fallu consolider dans une logique commune :</p>
         <ul>
-            <li><b>Ingénierie des données :</b> Extraction, nettoyage et harmonisation de sources hétérogènes (fichiers Enedis, bases métiers Oracle, données SIG) via des scripts SQL.</li>
-            <li><b>Modélisation :</b> Mise en place d'un Data Warehouse sous PostgreSQL avec une architecture en constellation (séparation en tables de faits et dimensions).</li>
-            <li><b>Restitution & Dataviz :</b> Développement de tableaux de bord interactifs sous Apache Superset à destination des 565 communes (bilans énergétiques, suivi des interventions) et création d'outils de contrôle qualité pour les prestataires.</li>
+            <li><b>Données métiers :</b> Issues de la base Oracle du SYDESL, consultées à travers des <i>foreign tables</i> PostgreSQL.</li>
+            <li><b>Fichiers externes :</b> Intégration et retraitement des données transmises par Enedis.</li>
+            <li><b>Tables locales :</b> Créées directement dans PostgreSQL pour structurer, compléter l'information et alimenter les tableaux de bord sur Apache Superset.</li>
         </ul>
-        <p><b>Technologies :</b> PostgreSQL, SQL, Apache Superset, Data Warehousing, ETL</p>
+        <p><b>Technologies :</b> PostgreSQL, Oracle, Apache Superset (pour la création du dashboard), SQL avancée , Modèle en constellation, Data Warehousing</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -136,14 +137,14 @@ elif selected_tab == "Projets":
         if os.path.exists(schema_path):
             st.image(schema_path, caption="Modèle en constellation du Data Warehouse", use_container_width=True)
         else:
-            st.info("Place ton image de schéma de base de données dans le dossier assets/ sous le nom 'schema_bdd.png'")
+            st.info("Image base de donnée : 'schema_bdd.png'")
             
     with col2:
         rapport_path = "assets/rapport_sydesl.png"
         if os.path.exists(rapport_path):
             st.image(rapport_path, caption="Extrait du tableau de bord interactif", use_container_width=True)
         else:
-            st.info("Place ta capture de rapport Superset dans le dossier assets/ sous le nom 'rapport_sydesl.png'")
+            st.info("capture d'écran superset : 'rapport_sydesl.png'")
 
 # ================= PAGE 4 : CONTACT =================
 elif selected_tab == "Contact":
