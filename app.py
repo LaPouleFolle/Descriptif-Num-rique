@@ -47,7 +47,7 @@ if selected_tab == "Accueil & CV":
         st.write("Après plusieurs années d'études en analyse économique, où j'ai appris à appliquer des modèles mathématiques à la micro et macroéconomie, j'ai choisi de me spécialiser en informatique décisionnelle. Aujourd'hui titulaire d'un Master 2 Mégadonnées et Analyse Sociale, et fort de 4 années d'expérience en tant que Data Analyst, j'évolue dans des environnements complexes pour transformer, analyser et valoriser les données.")        
         st.markdown("<br>", unsafe_allow_html=True)
         
-        cv_path = "assets/Mon cv pro.pdf"
+        cv_path = "assets/CV_Arsene_Mbabeh_Meye.pdf"
         if os.path.exists(cv_path):
             with open(cv_path, "rb") as f:
                 st.download_button(
