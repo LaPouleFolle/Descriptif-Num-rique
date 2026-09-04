@@ -44,8 +44,7 @@ if selected_tab == "Accueil & CV":
     with col2:
         st.markdown("<h1 style='font-size: 3rem; line-height: 1.1; color: #0284c7;'>ARSÈNE GABY<br>MBABEH MEYE</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='color: #334e68 !important;'>Data Analyst & Business Intelligence</h3>", unsafe_allow_html=True)
-        st.write("Data Analyst fort de quatre années d'expérience en alternance. De la structuration des bases de données à la création d'outils de Business Intelligence, je transforme les données brutes en informations claires pour faciliter la prise de décision stratégique.")
-        
+        st.write("Après plusieurs années d'études en analyse économique, où j'ai appris à appliquer des modèles mathématiques à la micro et macroéconomie, j'ai choisi de me spécialiser en informatique décisionnelle. Aujourd'hui titulaire d'un Master 2 Mégadonnées et Analyse Sociale, et fort de 4 années d'expérience en tant que Data Analyst, j'évolue dans des environnements complexes pour transformer, analyser et valoriser les données.")        
         st.markdown("<br>", unsafe_allow_html=True)
         
         cv_path = "assets/Mon cv pro.pdf"
